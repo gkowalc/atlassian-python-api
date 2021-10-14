@@ -2088,6 +2088,7 @@ class Jira(AtlassianRestAPI):
         :param fields: OPTIONAL list<str>: List of Issue Fields
         :param start: OPTIONAL int: Starting index/offset from the list of target issues
         :param limit: OPTIONAL int: Total number of project issues to be returned
+        (!) JIRA Cloud API can return maximum of 100 issues. See documentation for more details 
         :return: List of Dictionary for the Issue(s) returned.
         """
         jql = "project = {project} ORDER BY key".format(project=project)
